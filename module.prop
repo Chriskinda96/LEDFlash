@@ -1,0 +1,6 @@
+id=LEDFlash
+name=LEDFlash
+version=v1.0
+versionCode=1
+author=ChrisKinda
+description=Provides a script (/data/adb/modules/led-flasher-helper/flash_led.sh) to flash the charging LED. Intended to be called by automation apps like MacroDroid.
