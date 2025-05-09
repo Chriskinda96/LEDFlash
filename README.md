@@ -57,8 +57,8 @@ You need two macros in MacroDroid:
 * **Constraint:** `Device State` -> `Screen Off`
 * **Actions:**
     1.  `Device Actions` -> `Wake Lock` -> Mode: `Acquire Wake Lock`, Type: `Partial Wake Lock`, Timeout: `10 Seconds` (Adjust if needed, should be short).
-    2.  `Connectivity` -> `Shell Script`
-        * Enter the full path to your start script: `/data/adb/modules/led-flasher-helper/start_led.sh` (replace `led-flasher-helper` with your actual module ID if different).
+    2.  `Shell Script`
+        * Enter the full path to your start script: `/data/adb/modules/LEDFlash/start_led.sh`
         * **Tick the box "Run as root"**.
     3.  `Device Actions` -> `Wake Lock` -> Mode: `Release Wake Lock` (Optional, good practice).
 * **Save and Enable** the macro.
@@ -69,8 +69,8 @@ You need two macros in MacroDroid:
 * Optional `Device Events` -> `Screen On`. This will stop the LED when you turn on the screen to check notifications. Only recommended if you don't use AOD or lift to wake, as it could cause it to stop flashing unintentionally, e.g. if the screen wakes in your pocket.
 * **Constraint:** (None needed usually)
 * **Actions:**
-    1.  `Connectivity` -> `Shell Script`
-        * Enter the full path to your stop script: `/data/adb/modules/led-flasher-helper/stop_led.sh` (Use the same module ID as above).
+    1.  `Shell Script`
+        * Enter the full path to your stop script: `/data/adb/modules/LEDFlash/stop_led.sh` (Use the same module ID as above).
         * **Tick the box "Run as root"**.
 * **Save and Enable** the macro.
 
