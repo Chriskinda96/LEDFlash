@@ -18,6 +18,9 @@ This was configured and tested on a Motorola Edge 2023+ running Android 15, usin
     * Battery Optimization set to **"Unrestricted"** (Android Settings -> Apps -> MacroDroid -> Battery).
     * Exemption from any **device-specific** background task killers or power-saving features.
 * Knowledge of the correct `/sys/class/leds/.../brightness` path for the LED you wish to control on your specific device.
+* You can verify the included path by executing `su -c "echo > 255 /sys/class/leds/charging/brightness"` in Termux or using adb shell. If it turns on, you're good to go. Just execute
+`su -c "echo > 0 /sys/class/leds/charging/brightness"` to turn it off, then continue with installation.
+
 
 ## KernelSU Module Components (`LEDFlash`)
 
@@ -38,7 +41,7 @@ This module provides the core scripts for controlling the LED.
 ## Installation
 
 1.  **Verify/Edit Scripts:**
-    * Ensure the `LED_PATH` variable inside *both* `start_led.sh` and `stop_led.sh` points to the correct `/sys/class/leds/.../brightness` file for your device. You can verify this by executing `su -c "echo > 255 /sys/class/leds/charging/brightness"` in Termux or using adb shell. If it turns on, you're good to go. Just execute `su -c "echo > 0 /sys/class/leds/charging/brightness"` to turn it off, then continue with installation.
+    * Ensure the `LED_PATH` variable inside *both* `start_led.sh` and `stop_led.sh` points to the correct `/sys/class/leds/.../brightness` file for your device.
     * Adjust `sleep` durations in the `while true` loop within `start_led.sh` to change the flash rate if desired.
     * Ensure the filenames (`start_led.sh`, `stop_led.sh`) are consistent everywhere (in the files themselves, in `customize.sh`, and later in MacroDroid).
 2.  **Create Module ZIP:**
