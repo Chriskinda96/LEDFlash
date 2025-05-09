@@ -19,7 +19,7 @@ This was configured and tested on a Motorola Edge 2023+ running Android 15, usin
     * Exemption from any **device-specific** background task killers or power-saving features.
 * Knowledge of the correct `/sys/class/leds/.../brightness` path for the LED you wish to control on your specific device.
 
-## KernelSU Module Components (`led-flasher-helper`)
+## KernelSU Module Components (`LEDFlash`)
 
 This module provides the core scripts for controlling the LED.
 
