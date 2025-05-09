@@ -10,7 +10,7 @@ This was configured and tested on a Motorola Edge 2023+ running Android 15, usin
 ## Requirements
 
 * Android device rooted with **KernelSU**.
-* Magisk may work but havent tested with it.
+* Magisk may work, but I havent tested it yet.
 * **MacroDroid** app installed.
 * Necessary permissions granted to MacroDroid:
     * Notification Access (Android Settings -> Special app access).
